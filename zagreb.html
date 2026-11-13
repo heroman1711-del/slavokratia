@@ -7,70 +7,69 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #202122;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             margin: 0;
             padding: 16px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
         h1 {
             font-size: 26px;
-            border-bottom: 2px solid #eaecf0;
-            padding-bottom: 6px;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 4px;
             margin-top: 0;
         }
         h2 {
             font-size: 18px;
-            border-bottom: 1px solid #eaecf0;
+            border-bottom: 1px solid #a2a9b1;
             padding-bottom: 4px;
-            margin-top: 20px;
+            margin-top: 24px;
         }
         p {
             text-align: left;
-            margin: 0 0 14px 0;
+            margin: 0 0 12px 0;
         }
+        /* Вики-карточка на классической таблице */
         .infobox {
-            background: #f8f9fa;
+            float: right;
+            clear: right;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 0 16px 16px;
             border: 1px solid #a2a9b1;
-            padding: 10px;
-            margin-bottom: 16px;
-            border-radius: 4px;
+            background-color: #f8f9fa;
+            padding: 4px;
             font-size: 14px;
         }
-        .infobox-title {
-            font-weight: bold;
+        @media (max-width: 600px) {
+            .infobox {
+                float: none;
+                max-width: 100%;
+                margin: 0 0 16px 0;
+            }
+        }
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .infobox th {
+            background-color: #eaecf0;
             text-align: center;
-            font-size: 15px;
-            background: #eaecf0;
             padding: 6px;
-            margin: -10px -10px 8px -10px;
+            font-size: 15px;
+            border-bottom: 1px solid #a2a9b1;
         }
-        .infobox-row {
-            display: flex;
+        .infobox td {
+            padding: 6px 8px;
             border-bottom: 1px solid #eaecf0;
-            padding: 5px 0;
+            vertical-align: top;
         }
-        .infobox-row:last-child {
+        .infobox tr:last-child td {
             border-bottom: none;
-        }
-        .infobox-label {
-            font-weight: bold;
-            width: 40%;
-        }
-        .infobox-data {
-            width: 60%;
         }
         .back-link {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
             color: #0645ad;
             text-decoration: none;
         }
@@ -78,38 +77,44 @@
 </head>
 <body>
 
-<div class="container">
+<div>
     <h1>Загреб</h1>
 
+    <!-- Вики-инфобокс через таблицу -->
     <div class="infobox">
-        <div class="infobox-title">Загреб</div>
-        <div class="infobox-row">
-            <div class="infobox-label">Статус:</div>
-            <div class="infobox-data">Город / Административный центр</div>
-        </div>
-        <div class="infobox-row">
-            <div class="infobox-label">Регион:</div>
-            <div class="infobox-data">Славянское Государство</div>
-        </div>
-        <div class="infobox-row">
-            <div class="infobox-label">Население:</div>
-            <div class="infobox-data">~850 000 чел.</div>
-        </div>
-        <div class="infobox-row">
-            <div class="infobox-label">Часовой пояс:</div>
-            <div class="infobox-data">UTC+3</div>
-        </div>
-        <div class="infobox-row">
-            <div class="infobox-label">Основание:</div>
-            <div class="infobox-data">XIX век</div>
-        </div>
+        <table>
+            <tr>
+                <th colspan="2">Загреб</th>
+            </tr>
+            <tr>
+                <td><b>Статус:</b></td>
+                <td>Город / Административный центр</td>
+            </tr>
+            <tr>
+                <td><b>Регион:</b></td>
+                <td>Славянское Государство</td>
+            </tr>
+            <tr>
+                <td><b>Население:</b></td>
+                <td>~850 000 чел.</td>
+            </tr>
+            <tr>
+                <td><b>Часовой пояс:</b></td>
+                <td>UTC+3</td>
+            </tr>
+            <tr>
+                <td><b>Основание:</b></td>
+                <td>XIX век</td>
+            </tr>
+        </table>
     </div>
 
-    <p><strong>Загреб</strong> — один из ключевых стратегических, культурных и административных центров в структуре Славянского Государства. Город выполняет функции крупного транспортного и промышленного узла, объединяющего важнейшие логистические артерии региона.</p>
+    <p><b>Загреб</b> — один из ключевых стратегических, культурных и административных центров в структуре Славянского Государства. Город выполняет функции крупного транспортного и промышленного узла, объединяющего важнейшие логистические артерии региона.</p>
 
     <h2>История</h2>
     <p>Историческое развитие Загреба началось в период масштабных геополитических трансформаций. Благодаря своему выгодному географическому положению, поселение быстро трансформировалось из небольшого районного центра в крупный урбанистический хаб.</p>
 
+    <div style="clear: both;"></div>
     <a href="index.html" class="back-link">← Вернуться на главную</a>
 </div>
 
