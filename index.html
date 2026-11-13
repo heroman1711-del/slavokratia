@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Славянское Государство — Википедия</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Lato, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: #202122;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        a {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Верхняя панель мобильной Википедии */
+        .wiki-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #eaecf0;
+            padding: 12px 16px;
+            border-bottom: 1px solid #c8ccd1;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .menu-icon {
+            font-size: 20px;
+            color: #54595d;
+            cursor: pointer;
+        }
+        .wiki-logo {
+            font-family: "Linux Libertine", Georgia, Times, serif;
+            font-size: 19px;
+            letter-spacing: 0.06em;
+            color: #000000;
+        }
+        .wiki-logo span {
+            font-size: 23px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: #54595d;
+            font-size: 18px;
+        }
+
+        /* Основной контейнер статьи */
+        .article-container {
+            padding: 16px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* Заголовок статьи */
+        h1.article-title {
+            font-family: "Linux Libertine", Georgia, Times, serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin: 4px 0 12px 0;
+            line-height: 1.25;
+            color: #000000;
+        }
+
+        /* Вкладка Статья */
+        .article-tabs {
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #eaecf0;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .tab {
+            padding-bottom: 8px;
+            color: #202122;
+            border-bottom: 2px solid #202122;
+            cursor: pointer;
+        }
+
+        /* Панель инструментов */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 4px;
+            border-bottom: 1px solid #eaecf0;
+            color: #54595d;
+            font-size: 18px;
+        }
+        .toolbar-right {
+            display: flex;
+            gap: 22px;
+        }
+
+        /* Плашка стабильной версии */
+        .stable-banner {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 0;
+            font-size: 13.5px;
+            color: #54595d;
+            border-bottom: 1px solid #eaecf0;
+        }
+        .info-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #72777d;
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* Текст статьи и сноски */
+        p {
+            margin: 14px 0;
+        }
+        sup.reference {
+            font-size: 11px;
+            line-height: 1;
+        }
+
+        /* Карточка-инфобокс (справа в википедии) */
+        .infobox {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 12px;
+            margin: 16px 0;
+            font-size: 14px;
+            width: 100%;
+        }
+        @media (min-width: 550px) {
+            .infobox {
+                float: right;
+                width: 300px;
+                margin-left: 20px;
+                margin-bottom: 16px;
+            }
+        }
+        .infobox-title {
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #a2a9b1;
+            margin-bottom: 8px;
+        }
+        .infobox-row {
+            display: flex;
+            padding: 4px 0;
+            border-bottom: 1px solid #eaecf0;
+        }
+        .infobox-label {
+            width: 40%;
+            font-weight: bold;
+            color: #54595d;
+        }
+        .infobox-data {
+            width: 60%;
+        }
+
+        /* Сворачиваемые разделы */
+        h2.section-heading {
+            font-family: "Linux Libertine", Georgia, Times, serif;
+            font-size: 22px;
+            font-weight: normal;
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 6px;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            clear: both;
+        }
+        .chevron {
+            font-size: 14px;
+            color: #54595d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="wiki-header">
+        <div class="header-left">
+            <span class="menu-icon">☰</span>
+            <div class="wiki-logo"><span>В</span>ИКИПЕДИ<span>Я</span></div>
+        </div>
+        <div class="header-right">
+            <span>🔍</span>
+            <span>👤</span>
+        </div>
+    </header>
+
+    <!-- Контент статьи -->
+    <main class="article-container">
+        <h1 class="article-title">Славянское Государство</h1>
+
+        <div class="article-tabs">
+            <div class="tab">Статья</div>
+        </div>
+
+        <div class="toolbar">
+            <div>文A</div>
+            <div class="toolbar-right">
+                <span>⤓</span>
+                <span>🔖</span>
+                <span>✎</span>
+                <span>➦</span>
+            </div>
+        </div>
+
+        <div class="stable-banner">
+            <span class="info-badge">i</span>
+            <div><a href="#">Стабильная версия</a>, проверенная 13 ноября 2026.</div>
+        </div>
+
+        <!-- Карточка-инфобокс -->
+        <div class="infobox">
+            <div class="infobox-title">Славянское Государство<br><span style="font-size: 12px; font-weight: normal; font-style: italic;">Slavjansko Gosudarstvo</span></div>
+            
+            <div style="text-align: center; font-style: italic; font-size: 13px; padding: 6px 0; border-bottom: 1px solid #eaecf0;">
+                Девиз: <br>«Светяй звёзды вы навсегда!»
+            </div>
+
+            <div class="infobox-row">
+                <div class="infobox-label">Основано</div>
+                <div class="infobox-data">2013</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Столица</div>
+                <div class="infobox-data"><a href="#">Загреб</a></div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Язык</div>
+                <div class="infobox-data">славянский (общий)</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Правление</div>
+                <div class="infobox-data">Парламентская республика</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Президент</div>
+                <div class="infobox-data">Саша Владе</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Премьер-министр</div>
+                <div class="infobox-data">Александр Речинский</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Религия</div>
+                <div class="infobox-data">Светское государство</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Территория</div>
+                <div class="infobox-data">128 074 км² (94-е)</div>
+            </div>
+            <div class="infobox-row">
+                <div class="infobox-label">Население</div>
+                <div class="infobox-data">9 000 626 чел. (99-е)</div>
+            </div>
+            <div class="infobox-row" style="border-bottom: none;">
+                <div class="infobox-label">Членство в ООН</div>
+                <div class="infobox-data">с 2013 года</div>
+            </div>
+        </div>
+
+        <!-- Вводный абзац -->
+        <p>
+            <b>Славя́нское Госуда́рство</b> (слав. <i>Slavjansko Gosudarstvo</i>, разг. <i>Славократия</i>, слав. <i>Slavokratija</i>) — государство в Юго-Восточной Европе, имеющее выход к Адриатическому морю. Занимает территорию 128 074 км² (94-е место в мире). Население страны по состоянию на 21 июня 2021 года составляет 9 000 626 человек (99-е место в мире; общая численность населения оценивается в 9,06 млн человек).
+        </p>
+
+        <p>
+            На севере граничит с Австрией и Венгрией, на востоке — с Сербией, на западе — с Италией. Столица и крупнейший город — <a href="#">Загреб</a>. Экономически развитая страна, член Организации Объединенных Наций с 2013 года.
+        </p>
+
+        <!-- Разделы -->
+        <h2 class="section-heading"><span class="chevron">⌄</span> Государственное устройство</h2>
+        <p>
+            Славянское Государство является парламентской республикой. Государственной религией не наделено — официально является светским государством. 
+        </p>
+        <p>
+            Главой государства является Президент <b>Саша Владе</b>, исполнительную власть возглавляет Премьер-министр <b>Александр Речинский</b>. Официальным языком признан славянский (общий). Этнохороним (название жителей): <i>словен</i>, <i>слованка</i>, <i>словене</i>.
+        </p>
+
+        <h2 class="section-heading"><span class="chevron">⌄</span> Административное деление</h2>
+        <p>
+            В состав государства входят 3 основные земли: <b>Хорватия</b>, <b>Босния и Герцеговина</b> и <b>Словения</b>.
+        </p>
+        <p>
+            Крупнейшими городами страны являются: <a href="#">Загреб</a>, <a href="#">Сараево</a>, <a href="#">Любляна</a>, <a href="#">Сплит</a>, <a href="#">Риека</a>, <a href="#">Осиек</a>, <a href="#">Баня-Лука</a>, <a href="#">Тузла</a> и <a href="#">Марибор</a>.
+        </p>
+
+        <h2 class="section-heading"><span class="chevron">⌄</span> История</h2>
+        <p>
+            Государство было основано в 2013 году. С момента своего создания страна активно развивает экономические, политические и международные институты, став полноправным членом ООН.
+        </p>
+
+    </main>
+
+</body>
+</html>
